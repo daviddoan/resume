@@ -1,0 +1,207 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=NavyBlue,%
+    urlcolor=NavyBlue,
+    breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+      {\url{#2}}\\ \smallskip
+			{\url{#3}}\\ \smallskip
+			{\url{#4}}\\
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\summary}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+    \smallskip
+		{#1}
+	\end{changemargin}
+}
+
+\newcommand{\jobdescription}[1]{
+	\begin{changemargin}{0.15in}{0.15in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{David Doan}{www.ddoan.com}{www.linked.com/in/daviddoan1995}{ddoan@stanford.edu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Stanford University}{} \hfill \emph{Present}{} \\
+	Masters of Science Candidate (M.S.c) for Mechanical Engineering \hfill \emph{Stanford, CA}{} \\
+	\medskip
+	\textbf{Massachusetts Institute of Technology (MIT)}{} \hfill \emph{June 2017}{} \\
+	Bachelor of Science (B.S.) for Mechanical Engineering (Course 2) \hfill \emph{Cambridge, MA}{} \\
+	GPA: 4.6/5.0\\
+\end{body}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Experience}
+
+\begin{body}
+	\vspace{14pt}
+
+%%% Relativity Space %%%
+  \jobtitle{Relativity Space}{Mechanical Engineering Intern}{Jun - Sept 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Development of novel manufacturing processes
+      \item Development of toolpath planning for said manufacturing process
+    \end{itemize}
+  }
+
+%%% Beaver Works Lab%%%
+  \jobtitle{MIT Lincoln Beaver Works Center}{Researcher}{Jan - Jun 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Designed a benchtop system to convert a Honda 1kW generator (four-stroke) to run on hydrogen produced by an Al-H$_2$O reaction by injection through the carburetor 
+      \item Designed a benchtop system to convert a 1.2kW airplane engine (two-stroke) to run on hydrogen by continuous direct injection at top dead center (TDC)
+    \end{itemize}
+  }
+  
+%%% Global Engineering and Research Lab %%%
+  \jobtitle{MIT Global Engineering and Research (GEAR) Lab}{Researcher}{Sept 2016 - Jun 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Developed MATLAB code in order to decrease the cost of solar powered, drip irrigation systems in developing countries
+      \item Cost-optimized the system configuration using a genetic alogrithm by coupling the power output model and the water consumption model
+      \item Predicted the most cost effective system configuration (specific PV, specific water pump, tilt and azimuth angle, etc.) given several different plants for the given location of Jalgaon, India
+    \end{itemize}
+  }
+  
+%%% Tesla Motors %%%
+  \jobtitle{Tesla Motors}{Drive Systems Engineering Intern}{Jun - Sept 2016}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Developed processes to improve automation and cycle times for future Stator manufacturing lines
+  		\item Analyzed and calculated detailed numbers for future stator lines in order to ensure smooth process flows and provide hard numbers for automated deliveries
+  		\item Researched and implemented automated vision systems to detect defects in stators during the winding stage to prevent rework and scrap
+  		\item Designed dozens of locating and test fixtures for automated equipment for the current and future stator manufacturing lines
+  		\item Designed and modelled concepts for automated ceramic breaking to reduce cycle times
+  	\end{itemize}
+  }
+
+%%% SpaceX %%%
+  \jobtitle{Space Exploration Technologies (SpaceX)}{Avionics Engineering Intern}{Jun - Aug 2015}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Developed, from conceptualization to full implementation, an first prototype for automated mechanical testing of $>$80\% of all harness connectors in Falcon 9 and Dragon
+  		\item Designed and implemented over a dozen tooling solutions for several harnesses in order to lower rework and scrap
+  		\item Designed and developed test plans to replace time-intensive production processes
+  		\item Identified root cause, tested, and developed a solution for a mechanical issue on Dragon harnesses to prevent mechanical failure and rework
+  	\end{itemize}
+  }
+
+%%% MIT Media Lab %%%
+	\jobtitle{MIT Media Lab | Tangible Media Group} {Mechanical Engineering Researcher}{Jan - Sept 2014}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Designed and fabricated the second iteration of inForm prototype (a shape shifting table), called the Transform
+  		\item Modelled and prototyped several scalable solutions to implement larger individual units to solve issues with the inForm 
+  		\item Designed for manufacturing and drafted technical drawings to fabricate hundreds of parts for assembly of the final unit   
+  \end{itemize}
+  }
+  
+%%% Wedge Global %%%
+	\jobtitle{Wedge Global}{Mechanical Engineering Analyst}{Oct - Dec 2013}
+  \jobdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Analyzed the braking system for a wave energy converter (simulations and calculations) to ensure the braking mechanism and supporting structure would not fail in expected and edge-case scenarios 
+      \item Explored and researched alternative methods to reduce risk and increase efficiency of the braking system to recover energy\\
+    \end{itemize}
+  }
+
+\end{body}
+
+\medskip
+
+\end{document}

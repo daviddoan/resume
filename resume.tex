@@ -1,0 +1,204 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=NavyBlue,%
+    urlcolor=NavyBlue,
+    breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+      {\url{#2}}\\ \smallskip
+			{\url{#3}}\\ \smallskip
+			{\url{#4}}\\
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\summary}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+    \smallskip
+		{#1}
+	\end{changemargin}
+}
+
+\newcommand{\jobdescription}[1]{
+	\begin{changemargin}{0.15in}{0.15in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{David Doan}{www.ddoan.com}{www.linkedin.com/in/daviddoan1995}{ddoan@stanford.edu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Stanford University}{} \hfill \emph{Present}{} \\
+	Master of Science Candidate (M.S.c) for Mechanical Engineering \hfill \emph{Stanford, CA}{} \\
+	\medskip
+	\textbf{Massachusetts Institute of Technology (MIT)}{} \hfill \emph{June 2017}{} \\
+	Bachelor of Science (B.S.) for Mechanical Engineering (Course 2) \hfill \emph{Cambridge, MA}{} \\
+	GPA: 4.6/5.0\\
+\end{body}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Experience}
+
+\begin{body}
+	\vspace{14pt}
+
+%%% Relativity Space %%%
+  \jobtitle{Relativity Space}{Mechanical Engineering Intern}{Jun - Sept 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Development of a novel, automated manufacturing process
+      \item Development of in-house toolpath planning for said manufacturing process
+    \end{itemize}
+  }
+
+%%% Beaver Works Lab%%%
+  \jobtitle{MIT Lincoln Beaver Works Center}{Researcher}{Jan - Jun 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Designed a benchtop system to convert a 1kW generator (four-stroke) to run on hydrogen produced by an Al-H$_2$O reaction by carburetor injection
+      \item Designed a benchtop system to convert a 1.2kW airplane engine (two-stroke) to run on hydrogen by continuous direct injection at top dead center (TDC) that resulted in higher power density
+    \end{itemize}
+  }
+  
+%%% Global Engineering and Research Lab %%%
+  \jobtitle{MIT Global Engineering and Research (GEAR) Lab}{Researcher}{Sept 2016 - Jun 2017}
+  \jobdescription{
+    \begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Developed MATLAB code in order to decrease the cost of solar powered, drip irrigation systems in developing countries
+      \item Modelled drip-irrigation systems by coupling several subsystem models (solar, pump, water consumption etc.)
+      \item Cost-optimized the system configuration (specific PV, specific water pump, tilt and azimuth angle, etc.) using a genetic algorithm  for several different plants for the specific location of Jalgaon, India
+    \end{itemize}
+  }
+  
+%%% Tesla Motors %%%
+  \jobtitle{Tesla Motors}{Drive Systems Engineering Intern}{Jun - Sept 2016}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Designed dozens of locating and test fixtures for automated equipment for the current and future stator manufacturing lines  		
+  		\item Researched and implemented automated vision systems to detect defects in stators during the winding stage to prevent rework and scrap
+  		\item Analyzed and calculated detailed numbers for future stator lines in order to ensure smooth process flows and provide quantitative metrics for automated deliveries
+  		\item Designed and modelled concepts for automated ceramic breaking to reduce cycle times
+  	\end{itemize}
+  }
+
+%%% SpaceX %%%
+  \jobtitle{Space Exploration Technologies (SpaceX)}{Avionics Engineering Intern}{Jun - Aug 2015}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Developed, from design to implentation, a first prototype for automated mechanical testing of $>$80\% of all harness connectors in Falcon 9 and Dragon vehicles
+  		\item Designed and implemented over a dozen tooling solutions for several harnesses in order to decrease cycle times and rework
+  		\item Identified root cause, tested, and developed a solution for a mechanical issue on Dragon harnesses to prevent mechanical failure and rework
+  	\end{itemize}
+  }
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Leadership}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Founding Member, Board Member, Director} | \href{https://makemit.org/}{MakeMIT} \hfill {} \emph{Sept 2013 - Feb 2015}\\
+	\smallskip
+	\textbf{Founding Board Member} | \href{http://edgerton.mit.edu/clubs-teams/design-america}{Design for America} \hfill{} \emph{Sept 2014 - Jun 2015}\\
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+\begin{body}
+	\vspace{14pt}
+	\textbf{Questbridge Scholar} | Massachusetts Institute of Technology \hfill{} \emph{2013 - 2017}\\
+	\smallskip
+	\textbf{National Science Foundation (NSF) Research Fellow} | Stanford University \hfill{} \emph{2017 - 2020}
+
+\end{body}
+\end{document}
